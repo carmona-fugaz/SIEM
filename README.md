@@ -28,15 +28,7 @@ Requisitos para ejecutar el proyecto:
 * `Docker`
 * `Docker Compose`
 * `curl` (para verificar las conexiones)
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 2. Clonación y Configuración del Proyecto
@@ -51,30 +43,14 @@ cd SIEM
 
 2. Dentro del proyecto, deberás tener el archivo docker-compose.yml con la configuración de los contenedores.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 3. Configuración de Docker Compose
 
 El archivo docker-compose.yml configura los servicios que componen el proyecto: siem_app, logstash, elasticsearch y kibana. Además, se establece una red de tipo bridge para facilitar la comunicación entre los contenedores.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 4. Construcción y Levantado de Contenedores
@@ -92,15 +68,7 @@ docker ps -a
 
 Esto debería mostrarte los contenedores en ejecución, incluyendo `siem_app`, `logstash`, `elasticsearch` y `kibana`.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 5. Configuración de Contenedores Docker
@@ -125,15 +93,7 @@ Esto debería mostrarte los contenedores en ejecución, incluyendo `siem_app`, `
 
 * Accede a Elasticsearch para visualizar los logs procesados y ofrece una interfaz web en el puerto 5601.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 6. Verificación de Conexiones y Logs
@@ -161,15 +121,7 @@ docker logs logstash | grep "Listening"
 
 Si todo está correcto, deberías ver algo como Listening on port 5000.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 7. Solución de Problemas
@@ -188,15 +140,7 @@ docker restart siem_app
 
 * Verifica las dependencias: Si siem_app depende de logstash, asegúrate de que logstash esté completamente levantado antes de iniciar siem_app. Puedes verificar si un contenedor está listo usando docker logs.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 8. Acceso a Kibana y Visualización de Logs
@@ -207,15 +151,7 @@ Una vez que todos los contenedores estén funcionando correctamente, puedes acce
 
 * Configura las visualizaciones en Kibana: En Kibana, configura los índices y visualizaciones para que puedas empezar a analizar los logs enviados desde `siem_app` a través de Logstash.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # Notas adicionales
@@ -232,178 +168,12 @@ Una vez que todos los contenedores estén funcionando correctamente, puedes acce
 
 * Si deseas escalar este proyecto para procesar más logs, puedes agregar más instancias de `siem_app` o usar herramientas adicionales de monitorización.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # Conclusión
 Este proyecto te permite configurar un sistema básico de SIEM utilizando Docker y herramientas como siem_app, Logstash, Elasticsearch y Kibana. Siguiendo los pasos anteriores, deberías poder levantar los contenedores y comenzar a procesar y visualizar logs de seguridad en tiempo real.
 
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
 ---
 ---
 
@@ -437,15 +207,7 @@ Requirements to run the project:
 * `Docker`
 * `Docker Compose`
 * `curl` (for checking connections)
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 2. Cloning and Configuring the Project
@@ -460,30 +222,14 @@ cd SIEM
 
 2. Inside the project, you should have the docker-compose.yml file with the container configuration.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 3. Configuring Docker Compose
 
 The docker-compose.yml file configures the services that make up the project: siem_app, logstash, elasticsearch and kibana. In addition, a bridge network is set up to facilitate communication between the containers.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 4. Building and Pulling Up Containers
@@ -501,15 +247,7 @@ docker ps -a
 
 This should show you the running containers, including `siem_app`, `logstash`, `elasticsearch` and `kibana`.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 5. Docker Container Configuration
@@ -534,15 +272,7 @@ This should show you the running containers, including `siem_app`, `logstash`, `
 
 * Accesses Elasticsearch to display processed logs and provides a web interface on port 5601.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 6. Verifying Connections and Logs
@@ -571,15 +301,7 @@ docker logs logstash | grep ‘Listening
 If everything is correct, you should see something like Listening on port 5000.
 
 ---
----
----
----
----
----
----
----
----
----
+
 
 # 7. Troubleshooting
 
@@ -597,15 +319,7 @@ docker restart siem_app
 
 * Check dependencies: If siem_app depends on logstash, make sure that logstash is fully up before starting siem_app. You can check if a container is ready using docker logs.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # 8. Accessing Kibana and Viewing Logs
@@ -616,15 +330,7 @@ Once all the containers are working properly, you can access Kibana to view the 
 
 * Configure the visualisations in Kibana: In Kibana, configure the indexes and visualisations so that you can start analysing the logs sent from `siem_app` via Logstash.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # Additional notes
@@ -641,15 +347,7 @@ Once all the containers are working properly, you can access Kibana to view the 
 
 * If you want to scale this project to process more logs, you can add more `siem_app` instances or use additional monitoring tools.
 
----
----
----
----
----
----
----
----
----
+
 ---
 
 # Conclusion
